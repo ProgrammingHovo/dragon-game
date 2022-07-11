@@ -1,0 +1,114 @@
+*{
+	box-sizing: border-box;
+	margin: 0px;
+}
+
+
+body{
+	background-color: #f7f7f7;
+}
+
+.all{
+	width: 1100px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	margin: 0 auto;
+	top: 30%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.window{
+	width: 700px;
+	height: 200px;
+	/*border: 1px solid black;*/
+}
+
+
+.game-over{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	display: none;
+}
+
+.game-over-img{
+	width: 200px;
+}
+
+.line{
+	width: 699px;
+	height: 1px;
+	background-color: #9f9f9f;
+	margin-top: 95px;
+	position: absolute;
+	display: none;
+	z-index: -2;
+}
+
+.white-container{
+	background-color: #f7f7f7;
+	height: 200px;
+	width: 200px;
+}
+
+.dino{
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/dragon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 45px;
+	position: relative;
+	top: 150px;
+	left: 20px;
+}
+
+.animate{
+	animation: jump 700ms cubic-bezier(0.8, 0, 0.3, 1);
+}
+
+
+.cactus{
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/cactus.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25px;
+	position: relative;
+	top: 102px;
+	left: 700px;
+	z-index: -1;
+}
+
+.animate-cactus{
+	animation: cactus 2.5s infinite linear;
+	animation-delay: 2s;
+}
+
+@keyframes cactus{
+	0%{
+		left: 700px;
+	}
+	100%{
+		left: -50px;
+	}
+}
+
+@keyframes jump{
+	0%{
+		top: 150px;
+	}
+	50%{
+		top: 60px;
+	}
+	100%{
+		top: 150px;
+	}
+}
